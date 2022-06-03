@@ -1,0 +1,58 @@
+{
+    "name": "jasirilabs/laravel-calculator",
+    "description": "Awesome calculator",
+    "keywords": [
+        "jasirilabs",
+        "laravel-calculator"
+    ],
+    "homepage": "https://github.com/jasirilabs/laravel-calculator",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Bruno Alfred",
+            "email": "hello@brunoalfred.me",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^9.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^7.0",
+        "pestphp/pest": "^1.21",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "JasiriLabs\\Calculator\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JasiriLabs\\Calculator\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "JasiriLabs\\Calculator\\CalculatorServiceProvider"
+            ],
+            "aliases": {
+                "Calculator": "JasiriLabs\\Calculator\\CalculatorFacade"
+            }
+        }
+    }
+}
