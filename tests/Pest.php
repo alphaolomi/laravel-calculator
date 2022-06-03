@@ -11,7 +11,10 @@
 |
 */
 
-// uses(Tests\TestCase::class)->in('Feature');
+use JasiriLabs\Calculator\Tests\TestCase;
+
+uses(TestCase::class)->in(__DIR__);
+
 
 /*
 |--------------------------------------------------------------------------
